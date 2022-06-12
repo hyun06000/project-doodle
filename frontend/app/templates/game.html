@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', path='/style.css')}}">
+    </head>
+    <body>
+        <div id="container">
+            <a href="/">
+                <img src="{{url_for('static', path='/dodoodle.png')}}" alt="dodoodle">
+            </a>
+            <br>
+            <div class="timer" id="Timer">게임 시작!</div>        
+            <br>
+            <canvas id="mouseDraw" class="draw" width="512" height="512"></canvas>
+            <br>
+            <div class="timer" id="result"> </div>
+            
+            <br>
+            <a class="btn blue" href="/">시작 페이지</a>
+            <a class="btn red" href="/game">New Canvas!</a>
+
+            
+            <script src="{{url_for('static', path='/game.js')}}"></script>
+        </div>
+    </body>
+</html>
