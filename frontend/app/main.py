@@ -41,7 +41,7 @@ async def upload(uploaded_image:uploaded_image):
         "message": f"Successfuly uploaded {filename}",
         "inference": inference,
     }
-
-@app.get("/game", response_class=HTMLResponse) 
+    
+@app.get("/game", response_class=HTMLResponse)
 async def read_item(request: Request): 
 	return templates.TemplateResponse("game.html", {"request": request}) 
