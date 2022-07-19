@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', path='/style.css')}}">
+    </head>
+    <body>
+        <div id="container">
+            <a href="/">
+                <img src="{{url_for('static', path='/dodoodle.png')}}" alt="dodoodle">
+            </a>
+            <div>
+                인공지능이 당신의 그림 실력을 평가합니다.
+                <br>
+                제시어가 주어지면 20초 안으로 그리세요. 
+                <br>
+                자신있습니까 휴먼???
+                <br>
+                <img src="{{url_for('static', path='/smile_ai.jpg')}}" alt="킹받는ai짤" width="512" height="512">
+            </div>
+            <br>
+            <a class="btn blue" href="/game">게임시작!</a>
+        </div>
+    </body>
+</html>
