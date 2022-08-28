@@ -1,5 +1,7 @@
 ## Frontend app 사용방법
 
+프로젝트 두들의 시작페이지 입니다.
+
 1. 프로젝트의 루트디렉토리에서 `pip install -r requirements.txt`를 실행합니다.
 2. `/frontend/app/` 디렉토리로 이동합니다.  
 3. `main.py` 파일이 존재하는지 확인합니다.
