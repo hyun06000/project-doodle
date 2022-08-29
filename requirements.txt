@@ -1,4 +1,2 @@
-fastapi
-Jinja2
-Pillow
-uvicorn
+black
+isort
