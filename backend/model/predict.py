@@ -1,4 +1,5 @@
 import cv2
+from PIL import Image
 import numpy as np
 from keras.models import load_model
 
@@ -13,21 +14,8 @@ def process_image(img):
 
 def model_predict(image):
     categories = [
-        "사과",
-        "나비 넥타이",
-        "초",
-        "문",
-        "봉투",
-        "물고기",
-        "기타",
-        "아이스크림",
-        "번개",
+        "모자",
         "달",
-        "산",
-        "별",
-        "텐트",
-        "칫솔",
-        "손목시계",
     ]
     model = load_model("../../model/CNN.h5")
     processed = process_image(image)
@@ -35,3 +23,8 @@ def model_predict(image):
     print("pred_probab", pred_probab, pred_probab.argmax())
     pred_class = categories[pred_probab.argmax()]
     return pred_class
+
+if __name__=="__main__":
+    file_path = "/Users/haeunoh/project-doodle/frontend/app/image_draw.png"
+    image = Image.open(file_path)
+    print(model_predict(image))

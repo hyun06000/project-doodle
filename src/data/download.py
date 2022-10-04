@@ -19,20 +19,7 @@ if __name__ == "__main__":
         os.makedirs(data_path)
 
     categories = [
-        "apple",
-        "bowtie",
-        "candle",
-        "door",
-        "envelope",
-        "fish",
-        "guitar",
-        "ice%20cream",
-        "lightning",
+        "hat",
         "moon",
-        "mountain",
-        "star",
-        "tent",
-        "toothbrush",
-        "wristwatch",
     ]
     download(data_path, categories)

@@ -5,16 +5,16 @@ import numpy as np
 
 
 def load_data(data_path):
-    files = os.listdir(data_path)
+    files = sorted(os.listdir(data_path))
     X_data, y_data = [], []
     count = 0
     for file in files:
         file = data_path + file
         X = np.load(file, encoding="latin1", allow_pickle=True)
         X = X.astype("float32") / 255.0
-        X = X[0:120230, :]
+        X = X[0:120000, :]
         X_data.append(X)
-        y = [count for _ in range(120230)]
+        y = [count for _ in range(120000)]
         count += 1
         y = np.array(y).astype("float32")
         y = y.reshape(y.shape[0], 1)

@@ -7,7 +7,7 @@ var Y = 0;
 var drag = false;
 
 var inGame = true;
-var timeout = 20;
+var timeout = 60;
 var timeIntervalMs = 100;
 var sec = "";
 

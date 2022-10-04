@@ -27,7 +27,7 @@ def postprocess_labels(labels):
 
 
 def keras_model(x_shape, y_shape):
-    num_of_classes = 15
+    num_of_classes = 2
     model = Sequential()
     model.add(Conv2D(32, (5, 5), input_shape=(x_shape, y_shape, 1), activation="relu"))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding="same"))
