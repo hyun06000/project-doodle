@@ -11,7 +11,6 @@ def process_image(img):
     img = np.reshape(img, (-1, x_shape, y_shape, 1))
     return img
 
-
 def model_predict(image):
     categories = [
         "모자",
@@ -23,8 +22,3 @@ def model_predict(image):
     print("pred_probab", pred_probab, pred_probab.argmax())
     pred_class = categories[pred_probab.argmax()]
     return pred_class
-
-if __name__=="__main__":
-    file_path = "/Users/haeunoh/project-doodle/frontend/app/image_draw.png"
-    image = Image.open(file_path)
-    print(model_predict(image))
