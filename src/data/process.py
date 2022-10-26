@@ -5,7 +5,7 @@ import numpy as np
 
 
 def load_data(data_path):
-    files = os.listdir(data_path)
+    files = sorted(os.listdir(data_path))
     X_data, y_data = [], []
     count = 0
     for file in files:
